@@ -1,9 +1,14 @@
 /* Remove margin from the body */
+/* Importing Medieval Font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
 body {
     margin: 0; /* Remove any default body margin */
     font-family: 'Arial', sans-serif;
-    background-image: url("Atros.jpg");
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+     background-size: cover;
+     
     
 }
 
@@ -161,17 +166,21 @@ body {
 }
 
 /* Section Titles */
-.section-title {
+.section-title , .title-imp {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: #007bff;
 
 }
+.title-imp{
+    padding: 20px;
+}
+
 .left-section {
     display: flex;
     flex-direction: column; /* Stack the content vertically */
-    width: 50%;
+    width: 45%;
     padding: 20px;
     padding-bottom: 0px;
 
@@ -185,7 +194,7 @@ body {
 
 /* Right Section */
 .right-section {
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,8 +242,40 @@ body {
     align-self: center;
     margin-top: auto;
     border-radius: 10%;
-    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+.bottom-button:hover{
+    transform: scale(1.1); /* Slightly increases the size */
+    background-color: #45a049; /* Darkens the background on hover */
+}
+.bottom-button:active{
+    animation: shake 0.3s ease; /* Apply the shake animation when clicked */
+}
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 /* Add custom numbered markers with a fun style */
 .fancy-list li {
@@ -286,6 +327,7 @@ body {
 .accordion-container {
     width: 63%;
     padding: 30px;
+    padding-top: 0px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -452,8 +494,6 @@ body {
     background: linear-gradient(45deg, #784d33, #a67c52);
 }
 
-/* Importing Medieval Font */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
   footer {
     background-color: #f8f9fa;
     color: #333;

@@ -50,7 +50,7 @@ const fancyListHTML = `
         <li>Item 9: Description of the ninth item.</li>
         <li>Item 10: Description of the tenth item.</li>
     </ul>
-    <button class="bottom-button" id="button">Button</button>
+    <button class="bottom-button" id="button">Description</button>
 `;
 
 // Open modal when clicking the image
@@ -104,7 +104,7 @@ function toggleAccordion(event) {
   }
   document.getElementById('goBackButton').addEventListener('click', function () {
     // Hide the popup
-    history.back();}
-);
+    history.back()
+});
 
   
