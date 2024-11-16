@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Layout with Fancy Navbar and Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fancy Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="Atros.jpg" alt="Logo" class="round-image">
+            </div>
+            <ul class="nav-links">
+                <li><a href="world.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event, 'navbar-dropdown')">Maps</a>
+                    <ul id="navbar-dropdown" class="dropdown-content">
+                        <li><a href="Melnbel.html">Melnbel</a></li>
+                        <li><a href="Daaprough.html">Daaprough</a></li>
+                        <li><a href="Klark.html">Klark</a></li>
+                        <li><a href="Lupol.html">Lupol</a></li>
+                        <li><a href="Daylar.html">Daylar</a></li>
+                        <li><a href="CragHammer.html">CragHammer</a></li>
+                        <li><a href="HavenStead.html">HavenStead</a></li>
+                        <li><a href="MeatBurgh.html">Meat Burgh</a></li>
+                        <li><a href="FortNog.html">Fort Nog</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+     <div class="max-width">
+    <div class="container">
+        <div class="left-section" id="left-section">
+            <!-- Add a title here -->
+            <h2 class="section-title"id="sectionTitle">Introduction to the Content</h2>
+            <p class="left-p" id="introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras at sagittis odio, at sodales libero. Donec tristique, magna eget tincidunt tempus, ipsum libero dignissim nisl, a cursus dui mauris eget metus.</p>
+        </div>
+        
+        <div class="right-section">
+            <!-- Clickable image -->
+            <img src="Atros.jpg" alt="Sample Image" id="mainImage" class="clickable-image">
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <p>Additional information or footer content goes here.</p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

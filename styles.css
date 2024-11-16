@@ -1,0 +1,439 @@
+/* Remove margin from the body */
+
+body {
+    margin: 0; /* Remove any default body margin */
+    font-family: 'Arial', sans-serif;
+    background-image: url("Atros.jpg");
+    
+}
+
+/* Style for the navigation bar (with padding) */
+.navbar {
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient background */
+    padding: 15px 20px; /* Restore padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   
+}
+
+/* Navbar container styles */
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Aligns image to the left and nav to the center */
+    align-items: center; /* Vertically center */
+    width: 100%;
+}
+
+/* Round image styling */
+.navbar-logo img.round-image {
+    width: 50px; /* Set the size of the image */
+    height: 50px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image round */
+    transition:ease-in-out .5s
+}
+.round-image:hover{
+    transform:rotate(15deg) scale(107%);
+    
+    
+}
+
+
+/* Nav links container */
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Allows this section to take available space */
+    justify-content: center; /* Centers nav links */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+/* Style for the dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown button:hover {
+    background-color: #6a11cb; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px;
+    list-style: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown-content.active {
+    visibility: visible;
+    opacity: 1;
+}
+.max-width{
+    
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 25px;
+    
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff;
+
+}
+.left-section {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    width: 50%;
+    padding: 20px;
+    padding-bottom: 0px;
+
+}
+.left-p {padding: 25px;
+    line-height: 1.6;
+    background-color: #F9ECAC;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+/* Right Section */
+.right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clickable-image {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clickable-image:hover {
+    transform: scale(1.05);
+}
+
+.bottom-section {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+.fancy-list {
+    list-style-type: none; /* Remove default numbers */
+    padding: 0;
+    text-align: center; /* Center the list */
+    max-width: 600px; /* Optional: set a max width */
+    margin: 0 auto; /* Center the list horizontally */
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease; /* Optional: Add a fade-in effect */
+}
+.bottom-button{
+    width: 50%;
+    align-self: center;
+    margin-top: auto;
+    border-radius: 10%;
+    padding: 15px;
+}
+
+/* Add custom numbered markers with a fun style */
+.fancy-list li {
+    position: relative;
+    padding-left: 40px; /* Add space for the custom number */
+    margin-bottom: 15px; /* Spacing between list items */
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Custom number styling */
+.fancy-list li::before {
+    content: counter(list-item); /* Add the number as content */
+  
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2575fc; /* Custom color for numbers */
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif; /* Ensure a clean font */
+}
+
+/* Hover effect for the list items */
+.fancy-list li:hover {
+    color: #2575fc;
+    background-color: #f0f8ff;
+    cursor: pointer;
+    transform: translateY(-3px); /* Slight lift effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the custom number */
+.fancy-list li:hover::before {
+    background-color: #2575fc; /* Change number background color on hover */
+    color: #fff; /* Change number color to white */
+}
+
+/* Style for accordion container */
+.accordion-container {
+    width: 63%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  .side-picture{
+    width: 30%;
+  }
+  .flex-bottom{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Style for each accordion section */
+  .accordion-section {
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .accordion-header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add an arrow indicator */
+  .accordion-header::after {
+    content: '▼';
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate arrow when active */
+  .accordion-content.open + .accordion-header::after {
+    transform: rotate(180deg);
+  }
+  
+  /* Style for the accordion content */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 0 20px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    line-height: 1.6;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+  }
+  .accordion-p{
+    width: 60%;
+  }
+  .accordion-pic{
+    width: 40%;
+  }
+  
+  /* Active class for open content */
+  .accordion-content.open {
+    padding: 15px 20px;
+    max-height: 300px; /* Adjust according to content */
+  }
+  
+  
+  /* Add a subtle slide-down animation */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .accordion-content.open {
+    animation: slideDown 0.3s ease;
+  }
+  
+  /* Additional styling for paragraphs inside content */
+  .accordion-content p {
+    margin: 0;
+    color: #555;
+  }
+  footer {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    padding-top: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+  
+
+/* Optional: Add animation for the entire list */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    0% {
+      transform: scale(100%); /* Initial size */
+      opacity: 1; /* Fully opaque */
+    }
+    50% {
+      transform: scale(105%); /* Scale up */
+      /* Slightly transparent */
+    }
+    100% {
+      transform: scale(100%); /* Return to original size */
+      opacity: 1; /* Fully opaque */
+    }
+  }
