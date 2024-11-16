@@ -102,4 +102,9 @@ function toggleAccordion(event) {
       content.style.maxHeight = content.scrollHeight + 'px';
     }
   }
+  document.getElementById('goBackButton').addEventListener('click', function () {
+    // Hide the popup
+    history.back();}
+);
+
   
