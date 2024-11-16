@@ -32,6 +32,7 @@ document.addEventListener('click', function(event) {
 const mainImage = document.getElementById('mainImage');
 const sectionTitle = document.getElementById('sectionTitle');
 const leftSection = document.querySelector('.left-section');
+const RightSection = document.querySelector(".right-section");
 
 let hasOpened = false; // Flag to track whether the content has been changed
 
@@ -57,9 +58,14 @@ const fancyListHTML = `
 mainImage.onclick = function() {
   if (!hasOpened) {
    
+    if (window.innerWidth > 1200){
+        leftSection.style.width = "30%";
+        RightSection.style.width = "70%";
 
+    };
     // Hide the paragraph
     const paragraph = leftSection.querySelector('p');
+    
     if (paragraph) {
       paragraph.style.padding = "0";  // Remove padding
       paragraph.style.display = "none";  // Hide paragraph
@@ -84,6 +90,11 @@ mainImage.onclick = function() {
                 
             `;
             hasOpened = false;  // Allow the content to be changed again
+            if (window.innerWidth > 1200){
+                leftSection.style.width = "50%";
+                RightSection.style.width = "50%";
+        
+            };
         };
     }
   }

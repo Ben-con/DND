@@ -180,7 +180,7 @@ body {
 .left-section {
     display: flex;
     flex-direction: column; /* Stack the content vertically */
-    width: 45%;
+    width: 50%;
     padding: 20px;
     padding-bottom: 0px;
 
@@ -194,7 +194,7 @@ body {
 
 /* Right Section */
 .right-section {
-    width: 55%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
