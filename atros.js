@@ -33,15 +33,13 @@ const mainImage = document.getElementById('mainImage');
 const sectionTitle = document.getElementById('sectionTitle');
 const leftSection = document.querySelector('.left-section');
 const RightSection = document.querySelector(".right-section");
-
 let hasOpened = false; // Flag to track whether the content has been changed
 
-// Fancy list content (You can replace these with actual list items)
-const fancyListHTML = `
+var fancyListHTML = `
 <h2 class="section-title" id="sectionTitle">Legend</h2>
     <ul class="fancy-list">
         <li>Inn.</li>
-        <li>h</li>
+        <li>atros</li>
         <li>j</li>
         <li>h</li>
         <li>j</li>
@@ -53,6 +51,46 @@ const fancyListHTML = `
     </ul>
     <button class="bottom-button" id="button">Description</button>
 `;
+
+// Mapping of pages to their corresponding content
+const pageContent = {
+    'test.html': `
+        <h2 class="section-title" id="sectionTitle">Legend</h2>
+        <ul class="fancy-list">
+            <li>Inn.</li>
+            <li>hfgdfgdfgdfg</li>
+            <li>bog</li>
+            <li>h</li>
+            <li>j</li>
+            <li>j</li>
+            <li>j</li>
+            <li>j</li>
+            <li>j</li>
+            <li>h</li>
+        </ul>
+        <button class="bottom-button" id="button">Description</button>
+    `,
+    'daaprough.html': `
+        <h2 class="section-title" id="sectionTitle">Legend</h2>
+        <ul class="fancy-list">
+            <li>Inn.</li>
+            <li>hfgdfgdfgdfg</li>
+            <li>j</li>
+            <li>daaprough</li>
+            <li>j</li>
+            <li>j</li>
+            <li>j</li>
+            <li>j</li>
+            <li>j</li>
+            <li>h</li>
+        </ul>
+        <button class="bottom-button" id="button">Description</button>
+    `
+};
+const currentPage = window.location.pathname.split('/').pop(); // Get the page name (e.g., 'test.html')
+if (pageContent[currentPage]) {
+    var fancyListHTML = pageContent[currentPage];
+}
 
 // Open modal when clicking the image
 mainImage.onclick = function() {
@@ -89,6 +127,23 @@ mainImage.onclick = function() {
                 </p>
                 
             `;
+            if(window.location.pathname.includes("daaprough")){
+                leftSection.innerHTML = `
+                <h2 class="section-title" id="sectionTitle">Daaprough</h2>
+                <p class="left-p" id="introText">
+                    Artros is an extremely mountainous continent, broken by sea water running through the left side, also known as Belg. The mountains encapsulate Organo, the center country on this continent, where there is a giant crater with broken floating isles strewn about within. The thick forests cover the majority of the right side of the continent, and the mountainous range makes much of the land unusable to the people who reside here. The right side, also known as Fulder, contains two massive clearwater lakes and one running river that carries fresh fish.
+                </p>
+                
+            `;
+            }else if(window.location.pathname.includes("test")){
+                leftSection.innerHTML = `
+                <h2 class="section-title" id="sectionTitle">Fort Nog</h2>
+                <p class="left-p" id="introText">
+                    Artros is an extremely mountainous continent, broken by sea water running through the left side, also known as Belg. The mountains encapsulate Organo, the center country on this continent, where there is a giant crater with broken floating isles strewn about within. The thick forests cover the majority of the right side of the continent, and the mountainous range makes much of the land unusable to the people who reside here. The right side, also known as Fulder, contains two massive clearwater lakes and one running river that carries fresh fish.
+                </p>
+                
+            `;
+            }
             hasOpened = false;  // Allow the content to be changed again
             if (window.innerWidth > 1200){
                 leftSection.style.width = "50%";
