@@ -47,7 +47,7 @@ let hasOpened = false; // Flag to track whether the content has been changed
                 'daaprough.html': `
          <h2 class="section-title" id="sectionTitle">Daaprough</h2>
                 <p class="left-p" id="introText">
-                    Daaprough is an extremely mountainous continent, broken by sea water running through the left side, also known as Belg. The mountains encapsulate Organo, the center country on this continent, where there is a giant crater with broken floating isles strewn about within. The thick forests cover the majority of the right side of the continent, and the mountainous range makes much of the land unusable to the people who reside here. The right side, also known as Fulder, contains two massive clearwater lakes and one running river that carries fresh fish.
+                    The largest of the floating isles, Daaprough connects the northern part of Organo to the city of Yurgir. With a river running through the middle of the island, It is well known for its multi-colored forests as well as its multiple schools geared towards martial combat. These schools are located on the five hills closest to the river. This is where most of the elite troops from around Organo and beyond come to receive training from one of the headmasters of the schools. It is a very strict program with an extremely high drop-out rate causing students to leave. Stemming from the popularity of the schools, much of the housing was constructed on the outskirts of the island to house the instructors and students attending these schools. 
                 </p>
                  `,
                  'test.html':` 
