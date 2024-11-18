@@ -203,7 +203,7 @@ body {
     align-items: center;
 }
 
-.clickable-image {
+.clickable-image,.image-accordion,.image-bot {
     width: 100%;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -243,7 +243,6 @@ body {
 .bottom-button{
     width: 50%;
     align-self: center;
-    margin-top: auto;
     border-radius: 10%;
     background: #4CAF50;
     color: white;
@@ -332,7 +331,6 @@ body {
     padding: 30px;
     padding-top: 0px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     font-family: Arial, sans-serif;
   }
@@ -397,6 +395,9 @@ body {
   }
   .accordion-pic{
     width: 40%;
+  }
+  .description-pic{
+    color: grey;
   }
   
   /* Active class for open content */

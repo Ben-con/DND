@@ -54,7 +54,14 @@ let hasOpened = false; // Flag to track whether the content has been changed
                   <h2 class="section-title" id="sectionTitle">Fort Nog</h2>
                 <p class="left-p" id="introText">
                     Nog is an extremely mountainous continent, broken by sea water running through the left side, also known as Belg. The mountains encapsulate Organo, the center country on this continent, where there is a giant crater with broken floating isles strewn about within. The thick forests cover the majority of the right side of the continent, and the mountainous range makes much of the land unusable to the people who reside here. The right side, also known as Fulder, contains two massive clearwater lakes and one running river that carries fresh fish.
-                </p>`
+                </p>
+                `,
+                'yurgir.html':` 
+                 <h2 class="section-title" id="sectionTitle">Yurgir</h2>
+               <p class="left-p" id="introText">
+                    The capital city of Organo, Yurgir is located on the centermost island. It is connected to its fellow floating islands by highly guarded arcane bridges. Most adventurers never set foot in Yurgir because of how strict the entry process is. For the lucky few that have been, you find the rarest materials and magical items here, many of which are sold to the highest bidder. 
+               </p>
+               `,
             };
 
 var fancyListHTML = `
@@ -107,7 +114,19 @@ const pageContent = {
             <li>h</li>
         </ul>
         <button class="bottom-button" id="button">Description</button>
-    `
+    `,'yurgir.html': `
+        <h2 class="section-title" id="sectionTitle">Legend</h2>
+        <ul class="fancy-list">
+            <li>Inn.</li>
+            <li>Mage Tower</li>
+            <li>Inn</li>
+            <li>Castle</li>
+            <li>Blacksmith</li>
+            <li>Hospital</li>
+            <li>Magic Shop</li>
+        </ul>
+        <button class="bottom-button" id="button">Description</button>
+    `,
 };
 const currentPage = window.location.pathname.split('/').pop(); // Get the page name (e.g., 'test.html')
 if (pageContent[currentPage]) {
@@ -141,7 +160,6 @@ mainImage.onclick = function() {
     const button = document.getElementById("button");
     if (button) {
         button.onclick = function() {
-            console.error(currentPage);
             if(window.location.pathname.includes("world.html")){
             leftSection.innerHTML = `
                 <h2 class="section-title" id="sectionTitle">Atros</h2>
