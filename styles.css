@@ -554,3 +554,31 @@ body {
       opacity: 1; /* Fully opaque */
     }
   }
+  @media (max-width: 800px) {
+    .container{
+      flex-direction: column;
+    }
+    .right-section, .left-section , .accordion-container, .side-picture{
+      width: 100%;
+    } 
+    .left-section , .accordion-container{
+      padding: 0;
+    }
+    .bottom-button{
+      margin-bottom: 10px;
+    }
+    .flex-bottom{
+      flex-direction: column;
+    }
+    .side-picture{
+      padding: 10px;
+      width: 90%;
+      align-self: center;
+
+    }
+    .left-p{
+      margin-bottom:11px;
+    }
+
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+  }
